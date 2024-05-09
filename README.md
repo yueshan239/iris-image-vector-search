@@ -7,14 +7,14 @@ The image vector retrieval demo uses IRIS Embedded Python and OpenAI's CLIP mode
 - The images in the medical imaging database can be used for the education and training of medical students. Through image retrieval, students can search and compare different types of cases, deepening their understanding of disease characteristics and diagnostic methods.
 - Image retrieval can be used to assist doctors in diagnosis. By comparing medical imaging data of patients (such as X-rays, CT scans, MRI, etc.) and providing reference images of similar cases through a knowledge base, doctors can quickly obtain relevant information and improve diagnostic accuracy.
 
-## 用法
+## How to use it
 
 ### Prerequisites
 Make sure you have git and Docker desktop installed.
 ### Installation
 #### 1.Clone/git pull the repo into any local directory
 ```
-git clone ***
+git clone https://github.com/yueshan239/iris-image-vector-search.git
 ```  
 #### Open the terminal in this directory and run
 
@@ -27,9 +27,15 @@ docker-compose build
 docker-compose up -d
 ```
    
-#### 启动dist包
-1111
+#### Open the terminal in `vue` directory and run
 
+```
+docker-compose build
+```
+#### Run the nginx container
+```
+docker-compose up -d
+```
 #### Visit the address below
 ```
 http://localhost:8080/
