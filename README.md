@@ -38,5 +38,5 @@ docker-compose up -d
 ```
 #### Visit the address below
 ```
-http://localhost:8080/
+http://localhost:52774/
 ```
