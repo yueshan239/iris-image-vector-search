@@ -1,0 +1,11 @@
+version: '3.0'
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 52774:80
+
+
