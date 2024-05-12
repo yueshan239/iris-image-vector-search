@@ -23,8 +23,11 @@ ClassMethod Search(Method As %String) As %Status
 	Do %response.SetHeader("Content-Type", "application/json;charset=UTF-8")
 	Try{
 		Set content=""
-		Set:$L(%request.Content)'=0 content=$zcvt(%request.Content.Read(),"I","UTF8")
-		
+		if $L(%request.Content)'=0{
+			while '%request.Content.AtEnd{
+				Set content=content_$zcvt(%request.Content.ReadLine(),"I","UTF8")
+			}		
+		}
 		Set ^Log($ZDT($NOW(),3,,6))="Calling the Search interface :"_content
 		Set tsc = ##class(VectorSearch.Service.Search).Send(Method,content,.out)
 	   	set message=out.StringValue
